@@ -116,7 +116,7 @@ def update_course(
     return course
 
 
-@app.post("/courses/{course_id}/enroll", status_code=201)
+@app.post("/courses/{course_id}/enroll")
 def enroll_course(
     course_id: int,
     db: Session = Depends(get_db),
